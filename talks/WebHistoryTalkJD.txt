@@ -1,0 +1,415 @@
+Web History Talk Notes
+
+
+I am just going to breeze through this – here is our itinerary – if anyone wants to add to this or do the presentation on any of these topics please let Fay or me know. These are just meant to inspire and pique your curiosity so a very cursory overview and don't take too much time to prepare.
+
+list
+
+Hi, in this month's inaugural “Words from the Webmaster” I want to start us off with a very brief history of the web. Basically, I am going to talk about 3 things: the Internet, the Web and the people who started us off. I am not going to prognosticate and suggest where we are going – that is up to you.
+
+The web has grown out of conflicting forces - broad vision, focused greed, World hegemony, and the quest for peace and equality for all. It started with the building of the internet – providing a canvas upon which the Web could be painted.
+
+picture of Al Gore – and I like Al...
+
+Lots of people were involved (and Al Gore was NOT really one of them) – and this is something to emphasize: the people were all visionaries and geeks of the highest order. These were technical gods with skills that matched their visions.
+
+OK, let's start at the beginning: Think 1945 we have just given our all and worked together as a country to triumph over the evil of Hitler and his allies. We have brought all of our nations resources, our greatest brains and talents, to create the atom bomb. We are at the top of our game and then – sputnik.
+
+picture of sputnik 1
+
+1957 the Soviets strap together a bunch of old war rockets and shoot a basketball into space – they have beat us into space – the final frontier. This is the first man-made satelite. Our moment when we all thought we were technologically invincible is over. We, as a nation, are terrified. If they can beat us into space AND have The Bomb then we are in trouble. Some of you here know this better than I; this was a very real fear.
+
+
+Soon after Sputnik President Eisenhower created the Advanced Research Projects Agency which was tasked, among other things, with creating a bombproof (nuclear) communications mechanism so the military could communicate across the country (Licklider & Klienrock). At that point there was just the ATT phone system and radio. Either too vulnerable or insecure. ATT wanted to pursue the picturephone as the way of the future – and promoted it through the Worlds Fair as late as 1964.
+
+Licklider Galactic Network and Kleinrock packets Barrens packets
+Lick hired roberts who used Barrans ideas to buildnetwork
+Kahn & Cerf create tcp/ip due to difficulties having all computers and networks with diff protocols talk to each other
+
+Licklider was interested in doing things better – to him Batch Processing (punch cards) was not functional and people needed to be able to better interact with the computers – and time sharing could be done more efficiently if people from all over could hook up. This was also a time of huge scientific gains in all fields and the amount of information out there was getting lost because people could not find or access it -this was a recurrent problem in all scientific communities. Licklider, unlike many in industry and even academia, saw the potential for computers (as part of networks) to improve COMMUNICATION, not just crunch vast numbers. Lastly, Licklider was someone who believed that government (EBMUD) has a responsibility to do what is right vs expedient and so felt Universities should be given funds to develop things independently vs business to come up with ideas that worked for them (punch cards).
+
+1951 Remington-Rand entered the market with the UNIVAC computer
+1955 Eisenhower announces USA hopes to launch a small Earth orbiting satellite
+1957 Sputnik launched
+1958/59, the first 'integrated circuit'
+1961 IBM introduced a 'Compatible Time Sharing System' into its 7090/94 series which allowed separate terminals in different offices to access the same hardware – still VERY expensive so whynot have lots of people across the country access one computer
+1962 JCR Licklider forms Information Processing Techniques Office (IPTO) of the ARPA
+there are about 10000 computers in the world – he is from BBN goes to MIT
+1963 ASCII standard accepted first network started - "The ARPA theme is that the promise offered by the computer as a communication medium between people, dwarfs into relative insignificance the historical beginnings of the computer as an arithmetic engine."
+1964 Paul Baran, Donald Davies, Leonard Kleinrock develop early packet switched network concept
+IBM comes out with 8 bit byte vs competing 16 & 32
+1965 MIT & RAND (or Berkeley) create first WAN with telephone lines connect 2 computers
+1966 Taylor (head of IPTO) complains that he has three computers on his desk and cant communicate with any others by phone – gets a million to fix it.
+1967 Larry Roberts sets up Interface Message Processors  (routers) to manage information travel on the network. SRI improves modem to work at 50kbps – he pushes the network thing at the annual arpa big meeting and proposes ways to connect disparate systems
+1968 Kleinrock sets up first node at UCLA
+1969 Ben Barker, Bernie Cosell, Will Crowther, Bob Kahn, Severo Ornstein, and Dave Walden. on first team at UCLA. Vint Cerf, Steve Crocker, and Jon Postel. SRI has Elizabeth (Jake) Feinler and Don Nielson. Doug Engelbart – first network communication on the planet October 29 between UCLA and SRI. “L” and “O” are transmitted successfully before network crashes – confirmed by simultaneous phone call. They were trying to logon...originally NCP later pushed to TCP/IP by Postel
+By December Uof Utah, UCLA, SRI, UCSB.
+1970 UNIX created by Dennis Ritchie and Kenneth Thompson at Bell
+1971 23 hosts at Universities and military – intel creates first microprocessor computer on chip and telnet created FTP started
+1972 40 hosts demoed and it went public and email created – other source says 24 hosts
+BBN, Ray Tomlinson does ray@bbn.com writes email program
+1973 37 hosts including Norway and England – or 30
+1974 TCP/IP created  62 hosts
+and remember – at this point no one was expecting cheap computers for the masses or BILLIONS of nodes – but the prescient design allows that...
+1976 a Unix-to-Unix protocol was developed by AT&T Bell laboratories and was freely distributed to all Unix computer users (since Unix was the main operating system employed by universities, this opened up networking to the broader academic community). In 1979 Usenet was established, an open system focusing on e-mail communication and devoted to 'newsgroups'
+1977 111 hosts – apple 2, commodore and tandy personal computers introduced
+1981 Bitnet (Because it's Time..) was developed City University New York to link university scientists using IBM computers, regardless of discipline, in the Eastern US. CSNet, funded by the US national Science Foundation was established to facilitate communication for Computer Scientists in universities, industry and government. Osborne and PC (IBM/Microsoft) introduced
+1980 Driller first starts Gophering to read research at National Science Foundation
+1982 TCP/IP  adopted for internet . a European version of the Unix network, Eunet, was established, linking networks in the UK, Scandinavia and the Netherlands.
+1983 Military leaves ARPANET to milnet/tcp/ip adopted for arpanet
+1984 by a European version of Bitnet, known as EARN (European Academic and Research Network). Over 1000 hosts – DNS starts John Postel Paul Mockapetris of USC/ISI and Craig Partridge of BBN
+Bill Joy of UCB ports tcp/ip into BSD Apple Macintosh ships
+1985 2000 hosts
+1986 5000 hosts
+1987 28000 hosts First commercial internet provider UUNET
+1988 US Gov expands funding and has NSF takeover and do free metering but  excluded "purposes not in support of research and education". First Virus infects computers (Morris Worm)
+1989 100000 hosts Tim Berners Lee and CERN researchers create HTTP, hypertext [xxxxxx] and free  'browser' Mosaic. He wants information to transcend the rapid turnover of people doing research on a topic so hypertext will connect people on dif systems as they move around. Information sharing just like time sharing.
+1990 300000 hosts first search engine created at McGill – Archie – Arpanet shuts down. ARCHIE Gopher and WAIS appear
+1991 NSF removes non research prohibition from backbone – Al Gore introduces High Performance Computing Act to fund more network growth. WWW started
+1992 50 websites in world – Joseph Hardin and Dave Thompson show group at NCSA TB Lee's browser and web and Students at U of I Champagne create NCSA (National Center for Supercomputer Applications), Mosaic...Larry Smarr shows to Jim Clark who helps found Netscape
+1993 150 websites in world
+1993 Marc Andreeson Eric Bina  creates Mosaic 3 and gives it away
+1994 www starts to take off 3.2 million hosts 3000 websites – http traffic surpasses telnet traffic for first time...WHAT IS DIFF???
+1995 6.5 million hosts 25000 websites Netscape IPO Jonathan loses thousands...
+1996 13 million hosts 250K websites
+
+
+
+
+
+
+
+http://www.elon.edu/e-web/predictions/150/1960.xhtml
+ description
+This timeline is provided to help show how the dominant form of communication changes as rapidly as innovators develop new technologies.
+
+A brief historical overview: The printing press was the big innovation in communications until the telegraph was developed. Printing remained the key format for mass messages for years afterward, but the telegraph allowed instant communication over vast distances for the first time in human history. Telegraph usage faded as radio became easy to use and popularized; as radio was being developed, the telephone quickly became the fastest way to communicate person-to-person; after television was perfected and content for it was well developed, it became the dominant form of mass-communication technology; the internet came next, and newspapers, radio, telephones, and television are being rolled into this far-reaching information medium.
+
+Use the internet quicklinks below to jump to an item of interest or simply browse down the page.
+
+Development of the Internet
+World Changes Due to the Internet
+Internet Predictions
+
+The Development of the Internet
+
+LickliderThe public internet came along after four decades of television dominance and decades of private internet use and development. It came along after hundreds of years of inventive thinking and groundbreaking theorizing, and it built on every bit of human intelligence that had come before. The key innovators were dozens of scientists whose work covers decades; the entrepreneurs were thousands of political leaders, policy wonks, technology administrators, government and commercial contractors, and even grassroots organizers
+
+In the early 1960s, J.C.R. Licklider (pictured above), Leonard Kleinrock, Donald Davies, Paul Baran, Lawrence Roberts and other research scientists came up with the ideas that allowed them to individually dream of and eventually come together to create a globally interconnected set of computers through which everyone could quickly and easily access data and programs from any site.
+
+Arpanet logoThe first group of networked computers communicated with each other in 1969, and ARPANET, or the Advanced Projects Research Agency Network became the start of the internet. Four U.S. universities were connected and became a research system by which computer scientists began solving problems and building the potential for worldwide, online connectivity. ARPANET had its first public demonstration in 1972, and in this same year the first e-mail program was written by Ray Tomlinson. By 1973, a majority of the internet use was for e-mail discussion.
+
+Vint Cerf and Robert Kahn came up with a streamlined networking standard - internet Protocol or IP - in the late 1970s. At the time, there were still only 188 host computers on the network, but IP brought new growth in the next few years. In 1984, a domain-name service was created, allowing the organization and classification of the world's online sites. This address system is still in use today; for example, .com, .org, .edu. More have since been added.
+
+Berners-LeeIn 1991, the World Wide Web was developed by Tim Berners-Lee (pictured at left) as a way for people to share information. The hyper-text format available through his Web made the internet much easier to use because all documents could be seen easily on-screen without downloading. The first "browser" software - Mosaic - was introduced by Marc Andreessen in 1993, and it enabled more fluid use of images and graphics online and opened up a new world for internet users.
+
+In 1996, there were approximately 45 million people using the Internet. By 1999, the number of worldwide Internet users reached 150 million, and more than half of them were from the United States. In 2000, there were 407 million users worldwide. By 2004, there were between 600 and 800 million users (counting has become more and more inexact as the network has grown, and estimates vary).
+
+The internet is a work in progress. While IP version 6 is now ready for implementation, some scientists - led by internet pioneer David Clark and others - are working toward a complete reinvention of the worldwide internet, starting from scratch. The project is expected to develop over the next decade.
+
+World Changes Due to the Internet
+
+After Berners-Lee brought his "World-Wide Web" to life in 1990, and Andreessen launched Mosaic, the revolutionary browser, in 1993, the Internet had an estimated 16 million users by 1995, and venture capitalists were busy full-time, funding hundreds of new Internet-related business concerns. Individuals all over the world are sharing their interests, hopes and dreams online, and the number of internet users is nearing a billion.
+
+Arpanet teamThanks to the work of thousands of collaborators over the final four decades of the 20th century, today's Internet is a continually expanding worldwide network of computer networks for the transport of myriad types of data. In addition to the names above, there were direct contributions from Ivan Sutherland, Robert Taylor, Alex McKenzie, Frank Heart, Jon Postel, Eric Bina, Robert Cailliau, Tom Jennings, Mark Horton, Bill Joy, Douglas Engelbart, Bill Atkinson, Ted Nelson, Linus Torvalds, Richard Stallman and so many others - some of them anonymous hackers or users - it is impossible to include them all.
+
+Wireless satellite and broadband communications networks are helping people in even the most remote locations find ways to connect. Overcoming the initial concerns that commercialization would limit creativity or freedom of speech, the Internet has become a crazy-quilt mix of commercial sites, government information, and incredibly interesting pages built by individuals who want to share their insights.
+
+The number of people making Internet pages continues to grow. As of mid-2004, more than 63 million domain names had been registered, approximately one for every 100 people living in the world.
+
+Past Predictions About the Future of the Internet
+
+Mondo 2000 editor R.U. Sirius (real name, Ken Goffman), as quoted in a 1992 article in the Bergen (N.J.) Record headlined "Unfolding the Future":
+
+"Who's going to control all this technology? The corporations, of course. And will that mean your brain implant is going to come complete with a corporate logo, and 20 percent of the time you're going to be hearing commercials?"
+
+Peter Huber, a senior fellow at the Manhattan Institute, quoted in a 1992 Forbes article titled "An Ultimate Zip Code":
+
+"Combine GPS with a simple transmitter and computer ... If you want to track migratory birds, prisoners on parole or – what amounts to much the same thing – a teenage daughter in possession of your car keys, you are going to be a customer sooner or later."
+
+David Porush, a professor at the Rensselaer Polytechnic Institute, in a 1992 speech for the Library and Information Technology Association:
+
+"If cyberspace is utopian it is because it opens the possibility of using the deterministic platform for unpredictable ends ... We might even grow a system large and complex and unstable enough to leap across that last possible bifurcation - autopoetically - into that strangest of all possible attractors, the godmind."
+
+Author and Wired magazine columnist Bruce Sterling, in a 1993 Wired article headlined "War is Virtual Hell":
+
+"The whole massive, lethal superpower infrastructure comes unfolding out of 21st-century cyberspace like some impossible fluid origami trick. The Reserve guys from the bowling leagues suddenly reveal themselves to be digitally assisted Top Gun veterans from a hundred weekend cyberspace campaigns. And they go to some godforsaken place that doesn't possess Virtual Reality As A Strategic Asset, and they bracket that army in their rangefinder screens, and then they cut it off, and then they kill it. Blood and burning flesh splashes the far side of the glass. But it can't get through the screen."
+
+Futurist Jim Dator, in a speech to the WFSF World Conference in 1993:
+
+"As the electronic revolution merges with the biological evolution, we will have - if we don't have it already - artificial intelligence, and artificial life, and will be struggling even more than now with issues such as the legal rights of robots, and whether you should allow your son to marry one, and who has custody of the offspring of such a union."
+
+Futurist Alvin Toffler, in a 1993 Wired article titled "Shock Wave (Anti) Warrior":
+
+"If we are now in the process of transforming the way we create wealth, from the industrial to the informational … the more knowledge-intensive military action becomes, the more nonlinear it becomes; the more a small input someplace can neutralize an enormous investment. And having the right bit or byte of information at the right place at the right time, in India or in Turkistan or in God knows where, could neutralize an enormous amount of military power somewhere else … Think in terms of families. Think in terms of narco-traffickers. And think in terms of the very, very smart hacker sitting in Tehran."
+
+John Perry Barlow, internet activist and co-founder of the Electronic Frontier Foundation, in a 1994 essay for Wired magazine titled "The Economy of Ideas":
+
+"We're going to have to look at information as though we'd never seen the stuff before ... The economy of the future will be based on relationship rather than possession. It will be continuous rather than sequential. And finally, in the years to come, most human exchange will be virtual rather than physical, consisting not of stuff but the stuff of which dreams are made. Our future business will be conducted in a world made more of verbs than nouns."
+
+Tom Maddox, in a 1994 article for Wilson Quarterly titled "The Cultural Consequences of the Information Superhighway":
+
+"The sharp-edged technology of the NII can cut a number of ways: It can enlarge the domain of the commodifiers and controllers; it can serve the resistance to these forces; it can saturate us all, controlled and controllers alike, in a virtual alternative to the real world. Meanwhile, most of humanity will live and die deprived of the wonders of the NII, or indeed the joys of adequate nutrition, medical care, and housing. We would do well to regulate our enthusiasms accordingly - that is, to remember where love and mercy have their natural homes, in that same material world. Otherwise we will have built yet another pharaonic monument to wealth, avarice, and indifference. We will have proved the technophobes right. More to the point, we will have collaborated to neglect the suffering of the damned of the earth – our other selves – in order to entertain ourselves."
+
+Nicholas Negroponte, in a 1995 column for Wired magazine titled "Wearable Computing":
+
+"How better to receive audio communications than through an earring, or to send spoken messages than through your lapel? Jewelry that is blind, deaf, and dumb just isn't earning its keep. Let's give cuff links a job that justifies their name ... And a shoe bottom makes much more sense than a laptop - to boot up, you put on your boots. When you come home, before you take off your coat, your shoes can talk to the carpet in preparation for delivery of the day's personalized news to your glasses."
+
+Greg Blonder, in a 1995 essay for Wired magazine titled "Faded Genes":
+
+"In 2088, our branch on the tree of life will come crashing down, ending a very modest (if critically acclaimed) run on planet earth. The culprit? Not global warming. Not atomic war. Not flesh-eating bacteria. Not even too much television. The culprit is the integrated circuit ... By 2090, the computer will be twice as smart and twice as insightful as any human being. It will never lose a game of chess, never forget a face, never forget the lessons of history. By 2100, the gap will grow to the point at which homo sapiens, relatively speaking, might make a good pet. Then again, the computers of 2088 might not give us a second thought."
+
+Hans Moravec, as quoted in a 1995 article in Wired titled "Superhumanism":
+
+"The robots will re-create us any number of times, whereas the original version of our world exists, at most, only once. Therefore, statistically speaking, it's much more likely we're living in a vast simulation than in the original version. To me, the whole concept of reality is rather absurd. But while you're inside the scenario, you can't help but play by the rules. So we might as well pretend this is real - even though the chance things are as they seem is essentially negligible."
+
+View history of other information technologies:
+
+<Telegraph> <Radio> <Telephone> <Television> <Internet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A project of the Elon University School of Communications and the Pew Internet and American Life Project
+All rights reserved. Contact us at predictions@elon.edu
+
+isoc.org
+       ACM Logo
+
+
+
+
+
+Invitation
+# Send a Comment
+# Submit an Article
+# Subscribe
+
+
+Archives
+# Interviews
+# Views
+# Book Excerpts
+       ===================
+http://www.acm.org/ubiquity/views/v6i5_simoneli.html        Ubiquity - The ACM IT Magazine and Forum
+
+A Concise Guide to the Major Internet Bodies
+
+The bodies responsible for the Internet's protocols and parameters can be said to steer the Internet in a significant sense. This document, by Alex Simonelis of Dawson College in Montreal, is a summary of those bodies and their most important characteristics.
+
+1. Introduction
+
+Who steers the Internet? "The Internet, a loosely-organized international collaboration of autonomous, interconnected networks, supports host-to-host communication through voluntary adherence to open protocols and procedures defined by Internet Standards." [1]. While this definition is essentially correct, its emphasis might give the reader the impression that no one is at the helm of the Internet. That conclusion would be wrong. Certain protocols, and the parameters required for their usage, are essential in order to operate on the Internet. A number of bodies have become responsible for those protocol standards and parameters. It can be fairly said that those bodies steer the Internet in a significant sense. This document is a summary of those bodies and their most important characteristics.
+
+The bodies belong to three major nexuses. Links, both formal and informal, exist between the nexuses.
+
+Almost all Internet technological standards are developed and set by the group consisting of the Internet Society (ISOC) and the units operating under the auspices of ISOC: the Internet Architecture Board (IAB), the Internet Engineering Steering Group (IESG), the Internet Engineering Task Force (IETF), the Internet Research Steering Group (IRSG), the Internet Research Task Force (IRTF), and the RFC Editor. It is important to note that, while these units are responsible to ISOC, ISOC allows them a large degree of independence in their technical work.
+
+Internet domain names and IP addresses are the province of the Internet Corporation for Assigned Names and Numbers (ICANN) and its Internet Assigned Numbers Authority (IANA).
+
+World Wide Web standards are developed by the World Wide Web Consortium (W3C).
+
+It should be noted that the direction of the Internet's physical network structure is not addressed in this document. That structure is essentially determined by a large number of mainly commercial network operators, ranging from small to intercontinental, that build and join their infrastructures in response to market forces, in order to provide them to subscribers on a paid basis. These networks that form the Internet are linked in a topology similar to that of a large, well-developed highway system.
+
+2. ISOC
+
+ORGANIZATION: In 1991, the large growth of the Internet, including its commercial sector, and the Internet community's need for a formal organization to provide a legal home for the standards bodies of that time (IETF, etc.) led to the formation, under the auspices of the Corporation for National Research Initiatives (CNRI), of the Internet Society. In January 1992, the Internet Society was chartered as a U.S. District of Columbia non-profit corporation.
+
+GOVERNANCE: ISOC is governed by its Board of Trustees.
+
+MEMBERSHIP/COMPOSITION: ISOC welcomes individuals and organizations as members. Individuals in the Internet community have ample opportunity to participate in ISOC and its component bodies.
+
+MISSION/GOALS: ISOC's mission is "To assure the open development, evolution and use of the Internet for the benefit of all people throughout the world." [2]. As one of its most important tasks, it "facilitates open development of standards, protocols, administration and the technical infrastructure of the Internet" [2], and so it is the organizational and legal home for most of the groups that are responsible for developing Internet technical standards.
+
+FUNDING: ISOC is funded mainly from organization member fees.
+
+ASSOCIATED BODIES: IAB, IESG, IETF, IRSG, IRTF, RFC Editor.
+
+3. IETF
+
+ORGANIZATION: The Internet Engineering Task Force (IETF) held its first meeting in 1986. It is a loosely self-organized, large, grass roots technical group consisting of network administrators, designers, researchers, vendors, users, etc. In its broader sense, IETF is used to refer to IETF, IAB, IESG, IRSG, IRTF and RFC Editor as a collective.
+
+GOVERNANCE: The IETF is not a formal body, and has no board of directors. It operates as an activity of ISOC and is responsible to it. For its technical work, it is divided into broad units called areas, each led by the Area Director(s) (ADs). ADs are proposed by the nominating committee (the Nomcom) of the IETF, and appointed by the IAB. The areas are divided into more specialized working groups (WGs), each with chair(s). WG chairs serve at the pleasure of the appropriate AD. IETF has a chair who is proposed by the nominating committee of the IETF, and then appointed by the voting members of the IAB, not including the incumbent IETF chair. The IETF chair is also the chair of IESG. WG and AD decisions are subject to appeal to the IESG.
+
+MEMBERSHIP/COMPOSITION: There is no formal membership. Generally, attendance at IETF meetings and subscription to IETF mailing lists is open to all volunteers. Participants are expected to contribute as individuals, rather than as representatives of companies or organizations.
+
+MISSION/GOALS: The IETF concerns itself with the engineering and architecture of the Internet. It is the principal body that develops, tests and implements new Internet technological standards, including protocols. The IETF proposes standards to the IESG.
+
+FUNDING: The IETF, including its small Secretariat, is largely self-funded via IETF meeting attendance fees. A relatively small percentage of IETF's budget is contributed by ISOC.
+
+ASSOCIATED BODIES: ISOC, IAB, IESG, RFC Editor, ICANN, IANA, W3C.
+
+4. IESG
+
+ORGANIZATION: Formed in 1989, the Internet Engineering Steering Group (IESG) is the management group of the IETF.
+
+GOVERNANCE: The IESG operates as an activity of ISOC and is responsible to it. The IESG is led by the IETF/IESG chair. IESG decisions are subject to appeal to the IAB.
+
+MEMBERSHIP/COMPOSITION: The members are the Area Directors of IETF, the chair of IETF/IESG and a small number of ex-officio and liaison members.
+
+MISSION/GOALS: The IESG vets and approves IETF standards, and generally manages the standards process according to the policies and procedures ratified by the ISOC Trustees. The IESG creates IETF working groups, etc.
+FUNDING: The IESG is largely self-funded. ISOC contributes.
+
+ASSOCIATED BODIES: ISOC, IAB, IETF, RFC Editor, IANA.
+
+5. IRTF
+
+ORGANIZATION: Formed in 1989, the Internet Research Task Force (IRTF) is a self-organized research group.
+
+GOVERNANCE: The IRTF is divided into research groups (RGs), each with chair(s). RG chairs may be removed by the IRTF chair, subject to appeal to the IAB. The IAB appoints the chair of the IRTF. The IRTF chair reports to the IAB.
+
+MEMBERSHIP/COMPOSITION: Since RGs are expected to be long-term groups, and to encourage the kind of working relationships such groups may need, membership in RGs may be open or closed, in contrast with IETF WGs, which are always open. Participants are expected to contribute as individuals, rather than as representatives of companies or organizations.
+
+MISSION/GOALS: While the IETF focuses on engineering and standards, the IRTF focuses on research. The IRTF investigates Internet topics that are too uncertain or too advanced to be standardized at the moment. When IRTF produces a specification that is suitable for standardization, it is processed via IETF.
+
+FUNDING: The IRTF is largely self-funded. ISOC contributes.
+
+ASSOCIATED BODIES: ISOC, IAB, IRSG.
+
+6. IRSG
+
+ORGANIZATION: Formed in 1989, the Internet Research Steering Group (IRSG) is the management group of the IRTF.
+
+GOVERNANCE: The IRTF chair leads the IRSG. The IRTF chair reports to the IAB.
+
+MEMBERSHIP/COMPOSITION: The IRSG consists of the chairs of the IRTF research groups, the chair of IRTF, and possibly at-large members from the research community.
+
+MISSION/GOALS: The IRTF chair manages the IRTF in consultation with the IRSG.
+
+FUNDING: The IRSG is largely self-funded. ISOC contributes.
+
+ASSOCIATED BODIES: ISOC, IAB, IRTF.
+
+7. IAB
+
+ORGANIZATION: In June of 1992, the Internet Society chartered the Internet Architecture Board (IAB) as one of its components. The ancestor of the IAB was the Internet Configuration Control Board (ICCB), a technical advisory group formed by Vint Cerf of DARPA in 1979. The ICCB was replaced by the Internet Advisory Board (IAB) in 1984, which became the Internet Activities Board in 1986, which was chartered as the Internet Architecture Board in June, 1992.
+
+GOVERNANCE: ISOC has jurisdiction over the IAB but allows it a large degree of independence in its operations. With respect to technology, the IAB is considered to be a committee of the IETF.
+
+MEMBERSHIP/COMPOSITION: IAB voting members are proposed by the nominating committee of the IETF, and are then appointed by the ISOC Board of Trustees. The IETF chair, who is chair of IESG as well, is also a voting member. The voting members select one of themselves to serve as chair of IAB. Non-voting members, mainly from associated bodies, also exist. Members serve as individuals, and not as representatives of companies or organizations.
+
+MISSION/GOALS: ISOC mandates the IAB to oversee the architecture of the Internet, including its protocols and other standards. IESG decisions may be appealed to the IAB. IAB rulings are final, with the exception that claims that the IAB proceeded unreasonably may be appealed to the ISOC Board of Trustees. The appointment of an organization as RFC Editor is subject to IAB approval. The IAB claims, on behalf of the IETF, to appoint the organization which is to act as IANA (see sections 9 and 10 below). The IAB appoints the IETF Area Directors and the IETF chair on recommendation of the IETF, as well as the IRTF chair. The IAB advises ISOC's Board, and carries out technical external liaison on behalf of ISOC.
+
+FUNDING: The IAB is largely self-funded. ISOC contributes.
+
+ASSOCIATED BODIES: ISOC, IESG, IETF, IRSG, IRTF, RFC Editor, ICANN, IANA.
+
+8. RFC Editor
+
+ORGANIZATION: The RFC document series was initiated by UCLA's Steve Crocker in 1969, and maintained originally at the SRI Network Information Center, then at USC ISI. Jon Postel of USC ISI headed the RFC Editor for decades until his passing in 1998. The RFC Editor is currently a small department operated by USC ISI for ISOC.
+
+GOVERNANCE: ISOC appoints an organization as RFC Editor on the recommendation of IAB. The IAB vets the general policy followed by the RFC Editor.
+
+MEMBERSHIP/COMPOSITION: ISOC appointees.
+
+MISSION/GOALS: The RFC Editor is the organization that edits, manages, publishes and maintains the authoritative archive of the Request For Comments (RFC) documents, which are the Internet's documents of record.
+
+FUNDING: ISOC funds the RFC Editor.
+
+ASSOCIATED BODIES: ISOC, IAB, IESG, IETF, IANA.
+
+9. ICANN
+
+ORGANIZATION: In the late '90s, the U.S. government was completing implementation of its decision to privatize the Internet. The implementation called for the continued operational stability of the Internet, including its Domain Name System. In 1998, the Internet Corporation for Assigned Names and Numbers (ICANN) was chartered as a California non-profit corporation for this purpose. It can be regarded as a technical coordinating and regulatory body.
+
+GOVERNANCE: ICANN is governed by its Board of Directors. The majority of Directors are selected by ICANN's nominating committee. A number of others are appointed by ICANN's supporting organizations. Directors are expected to serve as individuals, not as representatives. The U.S. Department of Commerce gives ICANN authorization to perform the IANA function via a renewable contract which contains a number of reporting requirements. For the more technical aspects of its operations, ICANN and its Board rely on the IETF and the IAB for information and guidance.
+
+MEMBERSHIP/COMPOSITION: ICANN has neither individual nor organizational members in the ordinary sense. Its supporting organizations and advisory committees generally provide a great deal of feedback to the Board on the issues of the day, and ICANN regards them as its constituents. They span the globe and cover a broad range of interests: technical, commercial, governmental, academic and user-oriented. Individuals in the Internet community have some opportunity for participation in ICANN, mainly through its advisory committee structure.
+
+MISSION/GOALS: ICANN's revised articles of incorporation state that "... the Corporation shall, except as limited by Article 5 hereof, pursue the charitable and public purposes of lessening the burdens of government and promoting the global public interest in the operational stability of the Internet by (i) coordinating the assignment of Internet technical parameters as needed to maintain universal connectivity on the Internet; (ii) performing and overseeing functions related to the coordination of the Internet Protocol ("IP") address space; (iii) performing and overseeing functions related to the coordination of the Internet domain name system ("DNS"), including the development of policies for determining the circumstances under which new top-level domains are added to the DNS root system; (iv) overseeing operation of the authoritative Internet DNS root server system; and (v) engaging in any other related lawful activity in furtherance of items (i) through (iv)." [3]. The articles further state that ICANN "shall operate for the benefit of the Internet community as a whole, carrying out its activities in conformity with relevant principles of international law and applicable international conventions and local law and, to the extent appropriate and consistent with these Articles and its Bylaws, through open and transparent processes that enable competition and open entry in Internet-related markets. To this effect, the Corporation shall cooperate as appropriate with relevant international organizations." Among ICANN's most demanding responsibilities are the creation of top-level domains and the (re-)delegation of domain registries.
+
+FUNDING: ICANN is funded mainly from domain name and IP address registries and registrars. Its budget includes funds for a number of staff, headed by a President/CEO and including an Ombudsman.
+
+ASSOCIATED BODIES: IANA, U.S. Department of Commerce, IAB, IETF, W3C.
+
+10. IANA
+
+ORGANIZATION: The tasks that the Internet Assigned Numbers Authority (IANA) performs began in the early '70s. Those and ensuing tasks were performed, and the organization was led, by Jon Postel for decades. Formally, IANA is said to be a service or set of functions. In practical terms, it is a subsidiary organization of ICANN.
+
+GOVERNANCE: In March, 2003, the U.S. Department of Commerce awarded its most recent contract to ICANN to perform the IANA functions. ICANN operates IANA under the authority of the U.S. government. IANA works collegially with the IAB, IESG and IETF in carrying out its mission.
+
+MEMBERSHIP/COMPOSITION: ICANN appointees.
+
+MISSION/GOALS: IANA oversees IP address allocation, manages the DNS (this includes root server system oversight and top-level domain delegation), and coordinates protocol parameter assignment. All Internet domain names and IP addresses are allocated from IANA, either directly or, much more likely, indirectly through IANA's delegation of authority via a worldwide system of Internet registries and registrars.
+
+FUNDING: ICANN funds IANA.
+
+ASSOCIATED BODIES: ICANN, IAB, IESG, IETF, RFC Editor.
+
+11. W3C
+
+ORGANIZATION: The World Wide Web Consortium (W3C) was founded by Tim Berners-Lee in October, 1994 at MIT in collaboration with the European Organization for Nuclear Research (CERN).
+
+GOVERNANCE: The W3C is a group hosted by MIT in the U.S., the European Research Consortium in Informatics and Mathematics (ERCIM) in Europe, and Keio University in Japan (the Hosts). The W3C is responsible to the Hosts, who maintain a Steering Committee that sets general policy and strategy for W3C from time to time; the majority of the Steering Committee are either from, or appointed by, MIT. W3C calls its technical tasks "Activities", and groups them into broad units called domains. Activities are carried out by Working Group(s) (for technical work), Interest Group(s) (for general work) and Coordination Group(s) (for group coordination). Groups have a chair and consist of member representatives, Team representatives and invited experts. The Team is the Hosts' technical and staff corps that leads Activities and manages the W3C. The Team includes the Director, the Chief Operating Officer, the W3C Chair, W3C Fellows, and others. The Director: has responsibility and authority for overall direction of W3C, is the chief technical architect, chairs the Technical Architecture Group (TAG), appoints group chairs, hears appeals of working group decisions, is appointed by MIT and reports to the Director of MIT's Lab for Computer Sciences. The Chief Operating Officer is responsible for worldwide operations and general management of W3C. The W3C Chair, appointed by MIT, is responsible for member relations and external liaison. The Advisory Committee (AC) is the general assembly of the membership, with one representative from each member; it reviews proposed Activities and recommendations, and suggests future directions for the W3C. The Advisory Board, elected by the Advisory Committee, is the representative council of the membership; its chair is appointed by the Team; it is not a board of directors; it gives guidance to the Team on legal issues, strategy, administration, structures, process, etc., and can do so in between Advisory Committee meetings, which are infrequent.
+
+MEMBERSHIP/COMPOSITION: The W3C is structured, and membership is priced, to have organizations as members. Individuals in the Internet community have limited opportunity for participation in W3C, mainly via those W3C mailing lists that are public.
+
+MISSION/GOALS: "The mission of the World Wide Web Consortium (W3C) is to lead the World Wide Web to its full potential by developing common protocols that promote its evolution and ensure its interoperability." [4]. The W3C develops, tests and implements new Web technological standards ("recommendations" in W3C parlance). The W3C is similar to the IETF in that it develops technological standards, but its focus is more tightly directed, at the Web and associated technologies.
+
+FUNDING: W3C is funded mainly from organization member fees, and some grants. Its budget includes funds for a number of staff and collaborative resources.
+
+ASSOCIATED BODIES: IETF, ICANN.
+
+12. Acknowledgements
+
+Thanks to Dawson College. Thanks to Tim Berners-Lee, Bob Braden, Vint Cerf and Ian B. Jacobs for their constructive reviews of major portions of this document.
+
+13. References
+
+[1] Internet Activities Board, "The Internet Standards Process" - RFC1310, RFC Editor, March 1992.
+
+[2] ISOC, URL http://www.isoc.org/isoc/mission/, February 2005.
+
+[3] ICANN, URL http://www.icann.org/general/articles.htm, February 2005.
+
+[4] W3C, URL http://www.w3c.org/Consortium/Process, February 2005.
+
+14. Author Information
+Alex Simonelis is a faculty member in the Computer Science Department of Dawson College in Montreal, Canada, and is interested in the Internet, operating systems, programming languages and data structures. Email: asimonelis@dawsoncollege.qc.ca
+
+Author's Note
+
+The reader should be aware that this document was submitted to the RFC Editor as a proposed RFC, and rejected, essentially because it contains some points that were judged to be too controversial. For example, this paper describes ICANN as a technical coordinating and regulatory body; the senior leadership of ICANN, however, maintains that ICANN is definitely not a regulatory body, which is clearly contrary to reality. On another point, some groups described herein have contradictory views on which body has jurisdiction over IANA. Furthermore, there are differences of opinion regarding the degree of independence of the IETF from ISOC, and therefore any statement that takes a position will be considered controversial by some. And so it would be extremely difficult, if not impossible, for a document to treat this subject matter in a concise and accurate way, and at the same time avoid controversy. In any case, it is the author's conviction that this document does achieve objectivity by using historical and legal facts as its basis.
+
+Source: Ubiquity, Volume 6, Issue 5, (February 15 - February 22, 2005) http://www.acm.org/ubiquity
+http://www.cs.ucla.edu/~lk/first_words.html
+Below is a record of the first message ever sent over the ARPANET. It took place at 22:30 hours on October 29, 1969. This record is an excerpt from the "IMP Log" that we kept at UCLA. I was supervising the student/programmer Charley Kline (CSK) and we set up a message transmission to go from the UCLA SDS Sigma 7 Host computer to the SRI SDS 940 Host computer. The transmission itself was simply to "login" to SRI from UCLA. We succeeded in transmitting the "l" and the "o" and then the system crashed! Hence, the first message on the Internet was "lo"! We were able to do the full login about an hour later.
+
+http://www.livinginternet.com/
+   *  Web History
+
+         o Ted Nelson Discovers Hypertext
+         o Douglas Engelbart Develops The Mouse, GUI, And First Hypertext System
+         o Tim Berners-Lee, Robert Cailliau, and the World Wide Web
+         o Stanford Linear Accelerator Center (SLAC) Establishes First N.A. Web Site
+         o Mosaic -- The First Global Web Browser
+         o Netscape -- The First Commecial Web Browser
+         o Online Service Rush To The Web
+         o World Wide Web Consortium (W3C)
+         o Web Browser History
+         o History Of Hypertext Systems
+n the 1960's, Ted Nelson popularized the hypertext concept, and Douglas Engelbart developed the first working systems. In the 1980's, the web as we know it was developed in Europe by Tim Berners-Lee and Robert Cailliau, and then rapidly spread around the world over the Internet in the 1990's by Marc Andreessen and the NCSA team that developed the Mosaic and Netscape browsers. The following pages provide more information:
+
+My professional motivations are strongly oriented toward maximizing the benefit which society might derive from the advancements in the computer field. I might say then that my professional interests are toward the application of automatic information-handling equipment for helping human society, in the most significant way possible.
+D. C. Engelbart
+Douglas Engelbart developed the mouse, the graphical user interface, and the first working hypertext system, NLS, which was also the second computer system connected to the ARPANET.
+
+http://www.theatlantic.com/doc/194507/bush
+
+“Me”
+The web has grown out of conflicting forces - great vision, raw greed, World hegemony, and the quest for peace and equality for all.
+I like looking back and trying to understand how I am able to be here right now.
+If you ask different people about the histroy of the web you will get different scenarios; lots of people were involved (and Al Gore was NOT one of them)
+
+I am just going to breeze through this – here is our itinerary – if anyone wants to add to this or do the presentation on any of these topics please let  me know.
+These are just meant to inspire and pique your curiosity so a very cursory overview and don't take too much time to prepare.
