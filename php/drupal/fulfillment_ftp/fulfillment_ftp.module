@@ -1,0 +1,61 @@
+<?php
+
+//run this everytime cron runs - be careful & consider hook_cron_queue_info()
+
+function fulfillment_ftp_cron()
+{
+//name of view
+$name = "csv_report";
+//can use default but this is a csv
+$display_id = 'CSV';
+//save view to var in correct format
+$data = views_embed_view($name,$display_id);
+//give us today
+$today = date('yyyymmdd');
+$fn = "orders".$today.".csv";
+//create or open and append to orders[date].csv
+$fh = fopen("$fn","a+");
+//if file exists
+if($fh){
+	//check if file is writable
+	if(is_writable($fh))
+            {
+            //it is there and writable so write a-weigh
+            fwrite($fh,$data);
+            //now send via FTP
+            // FTP access parameters - should be passed in as args
+			$host = '69.10.5.108';
+			$usr = 'ebmud';
+			$pwd = 'express';
+			// file to move:
+			$local_file = './$fn';
+			$rmt_path = '/';  //may not need
+ 
+			// connect to FTP server on port 21
+			$conn_id = ftp_connect($host); 
+ 			if($conn_id == 'FALSE'){
+ 				watchdog("error", "Could not FTP fulfillment");
+ 			}
+			// try to login - "@" operator suppresses error messages, not return values
+			ftp_login($conn_id, $usr, $pwd);
+ 			//if(!@ftp_login($conn_id, $usr, $pwd){
+ 			//	watchdog("error", "Could not LOGIN to fulfillment ftp");
+ 			//}
+// turn on passive mode transfers (some servers need this)
+// ftp_pasv ($conn_id, true);
+ 
+			// upload
+			$upld = ftp_put($conn_id, $rmt_path, $local_file, FTP_ASCII);
+ 			if($upld == 'FALSE'){
+            	watchdog("error", "Could not UPLOAD csv file");
+            }
+			// close the FTP stream
+			ftp_close($conn_id);
+            }else{ 
+                watchdog("error", "Could not WRITE/CREATE the fulfillment.csv file");
+            }
+		}else{
+            watchdog("error", "Could not FIND the fulfillment csv file");
+            }
+fclose($fh);
+}

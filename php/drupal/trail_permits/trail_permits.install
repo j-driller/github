@@ -1,0 +1,339 @@
+<?php
+
+/**
+ * trailpermits.install
+ * create db for capturing trail permit data
+ */
+function trail_permits_install(){  // to create table
+		drupal_install_schema('trail_permits');
+		drupal_set_message('Tables for trail_permits module installed');
+		//_trail_permits_install_type_create();
+		//db_create_table($ret, 'trail_permits', $schema['trail_permits']);
+	}
+
+function trail_permits_uninstall(){  // to delete on uninstall
+		drupal_uninstall_schema('trail_permits');
+		drupal_set_message('Table for trail_permits uninstalled');
+		//variable_del('trail_permits_node_types');
+	}
+
+//For the Schema API to manage a module's tables, the .install file must implement hook_schema()
+//hook_schema() - like the create tables statement - add all columns in db tables here
+function trail_permits_schema(){
+	$schema['trl_applcnt_permits']=array(     //--------table one-trl_applcnt_tmp-------
+		'description' => t('trl_applcnt_permits table'),
+			'fields'=>array(
+				'TRL_APPLCNT_GN'=>array(
+					'type'=>'serial',  //number(5)   should be 'serial'
+					'unsigned'=>TRUE,
+					'not null'=>TRUE,
+					'description'=>t('incremented number'),
+					),
+				'TRL_APPLCNT_FRST_NM'=>array(
+					'type'=>'varchar', //varchar2(25)
+					'not null'=>TRUE, //false currently
+					'default'=>'',
+					'description'=>t('first name'),
+					'length'=>25,
+					),
+				'TRL_APPLCNT_MID_INIT_NM'=>array(
+					'type'=>'varchar',  //varchar2(1)
+					'not null'=>FALSE,
+					'default'=>'',
+					'description'=>t('middle initial'),
+					'length'=>1,
+					),
+				'TRL_APPLCNT_LST_NM'=>array(
+					'type'=>'varchar',   //varchar2(30)  'varchar', 'int', 'serial' 'float', 'numeric', 'text', 'blob' or 'datetime'
+					'not null'=>TRUE,
+					'default'=>'',   //columns default value
+					'description'=>t('last name'),
+					'length'=>30,
+					),
+				'TRL_APPLCNT_BIRTH_DT'=>array(
+					'type'=>'datetime',   //'varchar', 'int', 'serial' 'float', 'numeric', 'text', 'blob' or 'datetime'
+					'not null'=>TRUE,
+					'description'=>t('birth date'),
+					),
+				'HAIR_COLOR_CD'=>array(
+					'type'=>'varchar',  //varchar2(3)
+					'not null'=>FALSE,
+					'default'=>3,
+					'description'=>t('hair color'),
+					'length'=>3,
+					),
+				'EYE_COLOR_CD'=>array(
+					'type'=>'varchar',  //varchar2(3)
+					'not null'=>TRUE,
+					'default'=>'',
+					'description'=>t('eye color'),
+					'length'=>3,
+					),
+				'TRL_APPLCNT_HGT_QT'=>array(
+					'type'=>'varchar',  //varchar2(4)
+					'not null'=>TRUE,
+					'default'=>'',
+					'description'=>t('heigh feet'),
+					'length'=>4,
+					),
+				'TRL_APPLCNT_WGT_QT'=>array(
+					'type'=>'varchar',  //varchar2(3)
+					'not null'=>TRUE,
+					'default'=>'',
+					'description'=>t('weight'),
+					'length'=>3,
+					),				
+				'TRL_APPLCNT_SEX_CD'=>array(
+					'type'=>'varchar',  //varchar2(1)
+					'not null'=>TRUE,
+					'default'=>'',
+					'description'=>t('gender'),
+					'length'=>1,
+					),
+				'TRL_APPLCNT_VOLNTR_FG'=>array(
+					'type'=>'varchar',    //varchar2(1)
+					'not null'=>TRUE,
+					'default'=>'',
+					'description'=>t('??not sure what this is'),
+					'length'=>1,
+					),																				
+				'TRL_APPLCNT_ADDR_TX'=>array(
+					'type'=>'varchar',    //varchar2(50)
+					'not null'=>TRUE,
+					'default'=>'',
+					'description'=>t('address'),
+					'length'=>50,
+					),	
+				'CITY_CD'=>array(
+					'type'=>'varchar',    //varchar2(30)
+					'not null'=>TRUE,
+					'default'=>'',
+					'description'=>t('city'),
+					'length'=>30,
+					),
+				'STATE_CD'=>array(
+					'type'=>'varchar',    //varchar2(2)
+					'not null'=>TRUE,
+					'default'=>'CA',
+					'description'=>t('state'),
+					'length'=>2,
+					),
+				'CNTRY_CD'=>array(
+					'type'=>'varchar',    //varchar2(3)
+					'not null'=>TRUE,
+					'default'=>'USA',
+					'description'=>t('country'),
+					'length'=>3,
+					),					
+				'ZIP_CD'=>array(
+					'type'=>'varchar',    //varchar2(5)
+					'not null'=>TRUE,
+					'default'=>'',
+					'description'=>t('postal code'),
+					'length'=>5,
+					),
+				'ZIP4_CD'=>array(
+					'type'=>'varchar',    //varchar2(4)
+					'not null'=>FALSE,
+					'default'=>'',
+					'description'=>t('plus 4 postal code'),
+					'length'=>4,
+					),	
+				'PH_AREA_CD'=>array(
+					'type'=>'varchar',    //varchar2(3)
+					'not null'=>FALSE,
+					'default'=>'',
+					'description'=>t('telephone area code'),
+					'length'=>3,
+					),
+				'PH_NU'=>array(
+					'type'=>'varchar',    //varchar2(7)
+					'not null'=>FALSE,
+					'default'=>'',
+					'description'=>t('telephone'),
+					'length'=>7,
+					),
+				'TRL_APPLCNT_LST_UPDT_DT'=>array(
+					'type'=>'datetime',
+					'not null'=>TRUE,
+					'description'=>t(''),
+					),
+				'TRL_APPLCNT_LST_UPDT_ORAID_CD'=>array(
+					'type'=>'varchar',    //varchar2(30)
+					'not null'=>FALSE,
+					'description'=>t(''),
+					'length'=>30,
+					),					
+				'TRL_APPLCNT_EMAIL_ADDR_TX'=>array(
+					'type'=>'varchar',    //varchar2(72)
+					'not null'=>FALSE,
+					'default'=>'',
+					'description'=>t('email'),
+					'length'=>72,
+					),	
+			), //close fields					
+			'primary key'=>array('TRL_APPLCNT_GN'),
+			//'indexes' => array('nid' => array('nid')), //index on a column
+	);  //close schema for table 1
+	
+$schema['trl_appl_tmp']=array(     //----------table two-trl_appl_tmp--------------
+		'description' => t('trl_appl_tmp table'),
+			'fields'=>array(
+				'TRL_APPL_GEN'=>array(
+					'type'=>'serial',    //number(5)  should be 'serial'
+					'unsigned'=>TRUE,
+					'not null'=>TRUE,
+					'description'=>t('incrementing primary key'),
+					),
+				'TRL_APPL_NU'=>array(
+					'type'=>'int',      //number(7) 
+					'unsigned'=>TRUE,
+					'not null'=>FALSE,
+					'description'=>t('permit id ?'),
+					),
+				'TRL_APPL_LOC_CD'=>array(
+					'type'=>'varchar',   //varchar2(3)'varchar', 'int', 'serial' 'float', 'numeric', 'text', 'blob' or 'datetime'
+					'not null'=>TRUE,
+					'description'=>t('location of use'),
+					'length'=>3,
+					),
+				'TRL_PERMIT_USE_TYPE_CD'=>array(
+					'type'=>'varchar',  //varchar2(1)
+					'not null'=>TRUE,
+					'description'=>t('hiking or riding'),
+					'length'=>1,
+					),	
+				'TRL_APPL_DT'=>array(
+					'type'=>'datetime',
+					'not null'=>TRUE,
+					'description'=>t('date of app'),
+					),
+				'TRL_APPLCNT_GN'=>array(
+					'type'=>'int',    //number(5)
+					'unsigned'=>TRUE,
+					'not null'=>TRUE,
+					'description'=>t('application id number'),
+					),
+				'TRL_APPL_LST_UPDT_DT'=>array(
+					'type'=>'datetime',
+					'not null'=>TRUE,
+					'description'=>t('renewal date?'),
+					),
+				'TRL_APPL_LST_UPDT_ORAID_CD'=>array(
+					'type'=>'varchar',   //varchar2(30)
+					'not null'=>FALSE,
+					'description'=>t(''),
+					'length'=>10,
+					),	
+				),
+			'primary key'=>array('TRL_APPL_GEN'),
+			);
+
+$schema['trl_permit_tmp']=array(     //----------table three-trl_appl_tmp--------------
+		'description' => t('trl_permit_tmp table'),
+			'fields'=>array(
+				'TRL_PERMIT_GN'=>array(
+					'type'=>'serial',   //number(5)  should be 'serial'
+					'unsigned'=>TRUE,
+					'not null'=>TRUE,
+					'description'=>t(''),
+					),
+				'TRL_PERMIT_TYPE_CD'=>array(
+					'type'=>'varchar', //varchar2(2)
+					'not null'=>TRUE,
+					'description'=>t('middle initial'),
+					'length'=>2,
+					),
+				'TRL_PERMIT_NU'=>array(
+					'type'=>'int',   //number(7) 
+					'unsigned'=>TRUE,
+					'not null'=>FALSE,
+					'default' => 0,
+					'description'=>t(''),
+					//'size'=>'big',
+					),
+				'TRL_PERMIT_FEE_PD_QT'=>array(
+					'type'=>'int',  //number(2)
+					'unsigned'=>TRUE,
+					'not null'=>TRUE,
+					'description'=>t(''),
+					//'size'=>'small',
+					),	
+				'TRL_PERMIT_AREA_CD'=>array(
+					'type'=>'varchar',  //varchar2(1)
+					'not null'=>TRUE,
+					'description'=>t(''),
+					'length'=>2,
+					),
+				'TRL_PERMIT_ISSUE_DT'=>array(
+					'type'=>'datetime',
+					'not null'=>TRUE,
+					'description'=>t(''),
+					),
+				'TRL_PERMIT_ISSUE_TYPE_CD'=>array(
+					'type'=>'varchar', //varchar2(2)
+					'not null'=>FALSE,
+					'default'=>'',
+					'description'=>t(''),
+					'length'=>2,
+					),
+			    'TRL_PERMIT_EXPIR_DT'=>array(
+					'type'=>'datetime',
+					'not null'=>TRUE,
+					'description'=>t(''),
+					),	
+				'TRL_PERMIT_PYMT_TYPE_CD'=>array(
+					'type'=>'varchar',   //varchar(2)
+					'not null'=>FALSE,
+					'default'=>'',   //'default': The field's default value
+					'description'=>t(''),
+					'length'=>2,   //'length'=The maximal length of a type 'char', 'varchar' or 'text'
+					),
+				'TRL_PERMIT_PYMT_AM'=>array(
+					'type'=>'numeric',   //number(5,2)
+					'precision'=>5,
+					'scale'=>2,
+					'not null'=>TRUE,
+					'description'=>t('cost'),
+					),
+				/**
+				'TRL_PERMIT_REVK_FG'=>array(
+					'type'=>'varchar',    
+					'not null'=>TRUE,
+					'description'=>t(''),
+					),	
+				*/
+				'TRL_PERMIT_CHECK_NU'=>array(
+					'type'=>'int',  
+					'description'=>t(''),
+					),				
+				'TRL_PERMIT_BANK_NU'=>array(
+					'type'=>'int',    
+					'not null'=>FALSE,
+					'default'=>0,
+					'description'=>t(''),
+					),				
+				'TRL_APPL_GN'=>array(
+					'type'=>'int',
+					'not null'=>TRUE,
+					'description'=>t(''),
+					),				
+				'TRL_PERMIT_LST_UPDT_DT'=>array(
+					'type'=>'datetime',
+					'not null'=>TRUE,
+					'description'=>t(''),
+					),				
+				'TRL_PERMIT_LST_UPDT_ORAID_CD'=>array(
+					'type'=>'varchar',    //varchar(30)
+					'not null'=>FALSE,
+					'default'=>'0',
+					'description'=>t(''),
+					'length'=>30,
+					),	
+				),
+			'primary key'=>array('TRL_PERMIT_GN'),
+		);					
+return $schema;
+}
+
+

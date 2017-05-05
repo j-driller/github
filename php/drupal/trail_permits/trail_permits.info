@@ -1,0 +1,6 @@
+; $Id: trail_permits.info,v 1.5 2010/10/15 08:23:30 jpd Exp $
+name = Trail Permits
+description = module for customization of trail use permits
+package = Development
+core = 6.x
+version = 6.x-0.1

@@ -1,0 +1,8 @@
+; $Id: feedback2.info,v 1.0 2008/10/15 08:23:30 jpdmuddum Exp $
+name = Feedback2
+description = Allows site visitors and users to report issues about this site. Allow this to be placed in any block on page
+package = Development
+core = 6.x
+
+
+

@@ -1,0 +1,495 @@
+<?php
+function trail_permits_menu() {                       //create page
+  $items['trail-permits/form'] = array(               //URL to form - must be relative to docroot - no slash
+    'title' => t('Trail Permit Application'),         //title of html page - inside t() for translatability
+    'page callback' => 'trail_permits_form',          //call to drupal_get_form() function
+    'access arguments' => array('access content'),
+    'description' => t('Trail Permits Application Form'),   //admin description ???
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+function trail_permits_form() {
+    return drupal_get_form('trail_permits_my_form');  //call to function that builds form components
+} 
+
+//helper function that isn't needed probably
+function trail_permits_dv($setValue, $default='') {
+    return ($setValue===null)?$default:$setValue;
+}
+
+function trail_permits_my_form($form_state) {         //function that builds form components, takes fields in state as args
+    if (empty($form_state['storage']['step'])) {
+        // we are coming in without a step, so default to step 1
+        $form_state['storage']['step'] = 1;
+    }
+
+    //demo different fields on different steps
+    switch ($form_state['storage']['step']) {         //evaluate this then compare value against each case value below
+        case 1:                              //can be an expression vs number - each case is a 'page'
+              $form['pagetext1'] = array(
+              '#type' => 'markup',
+              '#value' => t('<div><p class="emergency">Please note: Lost permits cannot be replaced through this website. To replace a lost permit, email your name, address and permit number, if available, to recreate@ebmud.com.</p>
+
+ 
+
+<p>Thank you for your interest in obtining an EBMUD Trail Use Permit.  Permits are required for your safety.  Your personal information will be maintained in confidence unless needed for search and rescue or security purposes.</p>
+
+            <ul>
+
+                        <li>Trail permits are NOT required to hike the Lafayette Reservoir Rim or Lakeside Trail.</li>
+
+                        <li>Permit holders are allowed to take members of their immediate family plus three additional guests for whose conduct the Permittee shall be held responsible.</li>
+
+            </ul>
+
+ 
+
+<p>TRAIL USE RULES AND CONDITIONS<br/>
+
+TRAIL USER SHALL
+
+  <ol>
+
+  <li>Sign in on Trail Register form (at Staging Area) prior to using EBMUD trails.</li>
+
+  <li>Have in their possession at all times a valid Trail Use Permit or be accompanied by a valid permit holder.</li>
+
+  <li>Exhibit and/or surrender permit upon request of an EBMUD Ranger, County-Local Law Enforcement Officer, or any other person duly authorized by EBMUD.</li>
+
+  <li>Stay on designated trails.</li>
+
+  <li>Use trails between sunrise and sunset only.</li>
+
+  <li>Close all gates after passing through them.</li>
+
+  <li>Use only designated restroom facilities.</li>
+
+  <li>Carry out and properly dispose of all litter.</li>
+
+  <li>Remove and dispose of all animal waste products generated from trail user&#39;s animal from staging area.</li>
+
+  <li>Report unsafe conditions or other hazards to EBMUD.</li>
+
+  <li>Keep dogs adequately leashed and controlled at all times when hiking on designated dog trails and in staging areas.</li>
+
+ </ol>
+
+ </p>
+
+ 
+
+<p>TRAIL USER SHALL NOT<br />
+
+  <ol>
+
+  <li>Smoke while on the trails.</li>
+
+  <li>Build or light any fire on EBMUD property.</li>
+
+  <li>Make body contact with the waters of any reservoir or tributary stream on EBMUD property, except at Camanche Reservoir and the Mokelumne River Day Use Area.</li>
+
+  <li>Fish from any reservoir or tributary stream on EBMUD property.</li>
+
+  <li>Disturb livestock, wildlife, or vegetation on EBMUD property.</li>
+
+  <li>Bring pets, firearms, motorized vehicles, stallions or colts onto EBMUD trails.</li>
+
+  <li>Damage or destroy any EBMUD property; including (but not limited to) gates, fences, signs, locks, structures, buildings, etc.</li>
+
+  <li>Ride or lead any saddle or pack animal in a manner that might endanger any person or animal, or allow any such animal to stand unattended or untethered on EBMUD property.</li>
+
+  <li>Permit any saddle or pack animal to swim or wade in any reservoir or tributary stream on EBMUD property.</li>
+
+  <li>Ride a bicycle on any portion of the watershed closed to bicycle use.</li>
+
+  <li>Use any other EBMUD recreational facilities without paying applicable fees.</li>
+
+  <li>Use conveyances with wheels, tracks, or skids on unpaved roads or trails.</li>
+
+  </ol>
+
+  </p>
+
+ 
+
+<p>Declaration:  <br />
+
+By electronic submission and acceptance of the terms of this Trail Use Permit, I agree to abide by the terms and conditions set forth herein and to indemnify and hold harmless East Bay Municipal Utility District, its Directors, Officers, Agents and Employees from and against any and all loss, injury, claim or liability resulting from the use of EBMUD property under this permit.</p>
+
+ 
+
+<p>The Trail Use Permit is not transferable.  Applicant understands and agrees that EBMUD may refuse to issue further permits to persons from whom permits have been confiscated or revoked.  Violation of any rule or regulation is an infraction punishable by law.  EBMUD reserves the right to close the trails, or any portion thereof, at any time. </p>
+
+<br /></div>'),
+  );
+             break;
+
+    //show I agree button all the time
+    $form['agree'] = array(
+        '#type' => 'submit',
+        '#value' => 'I agree >>'
+      );
+
+
+        case 2:                                       //can be an expression vs number
+         //$form['field2'] = array (
+         //   '#type' => 'textfield',
+         //   '#default_value' => trail_permits_dv($form_state['storage']['values'][2]['field2']),
+        //    '#title' => t('Test Field 2')
+        //    );
+        
+        	
+			//fieldset
+           $form['contact'] = array(
+              '#title' => t('Your Contact Information (so we can contact you if we have to):'),
+              '#type' => 'fieldset',
+               //'#description' => t('Please describe yourself'),
+               '#collapsible' => FALSE,
+               '#collapsed' => FALSE,
+               );
+
+               $form['contact']['TRL_APPLCNT_LST_NM'] = array(
+              '#title' => t('Last Name'),
+              '#type' => 'textfield',
+              '#required' => TRUE,
+              );
+
+              $form['contact']['TRL_APPLCNT_FRST_NM'] = array(
+              '#title' => t('First Name'),
+              '#type' => 'textfield',
+              '#required' => TRUE,
+              );
+              
+              //middlename
+              $form['contact']['TRL_APPLCNT_MID_INIT_NM'] = array(
+              '#title' => t('Middle Name'),
+              '#type' => 'textfield',
+              '#required' => TRUE,
+              );
+
+              $form['contact']['TRL_APPLCNT_ADDR_TX'] = array(
+              '#title' => t('Address 1'),
+              '#type' => 'textfield',
+              '#required' => TRUE,
+              );
+
+              $form['contact']['address2'] = array(
+              '#title' => t('Address 2 [note most places use this]'),
+              '#type' => 'textfield',
+              );
+
+              $form['contact']['CITY_CD'] = array(
+              '#title' => t('City/Town'),
+              '#type' => 'textfield',
+              );
+
+              $form['state_options'] = array(
+              '#type' => 'value',
+              '#value' => array(t('Alaska'),t('Alabama'),t('Connecticut'),t('auburn'),t('red'),t('grey'),t('dyed/rainbow'),t('none'))
+              );
+
+              $form['contact']['STATE_CD'] = array(
+              '#title' => t('State [note if this is a foreign country you need another field]'),
+              '#type' => 'select',
+              '#options' => $form['state_options']['#value']
+              );
+
+              $form['contact']['ZIP_CD'] = array(
+              '#title' => t('Postal Code'),
+              '#type' => 'textfield',
+              );
+              
+               $form['contact']['ZIP4_CD'] = array(
+              '#title' => t('ZIP +4 Code'),
+              '#type' => 'textfield',
+              );
+              
+              $form['contact']['CNTRY_CD'] = array(
+              '#title' => t('Country'),
+              '#type' => 'textfield',
+              );
+
+              $form['contact']['PH_AREA_CD'] = array( 
+              '#title' => t('Telephone Area Code'),
+              '#type' => 'textfield',
+              );
+              
+              $form['contact']['PH_NU'] = array(  
+              '#title' => t('Telephone Number'),
+              '#type' => 'textfield',
+              );
+
+
+              $form['contact']['TRL_APPLCNT_EMAIL_ADDR_TX'] = array(
+              '#title' => t('Email'),
+              '#type' => 'textfield',
+              );  
+
+          break;
+
+        case 3:
+        				//fieldset
+           $form['bio'] = array(
+              '#title' => t('Your Description (so we can identify you if we have to):'),
+              '#type' => 'fieldset',
+               '#description' => t('Please describe yourself'),
+               '#collapsible' => FALSE,
+               '#collapsed' => FALSE,
+               );
+        	
+         //$form['bio']['field3'] = array (
+            //'#type' => 'textfield',
+            //'#default_value' => trail_permits_dv($form_state['storage']['values'][3]['field3']),
+            //#title' => t('Test Field 3')
+            //);
+//gender       
+               $form['gender_options'] = array(
+              '#type' => 'value',
+              '#value' => array(t('Male'),t('Female'))
+              );
+
+			  $form['bio']['TRL_APPLCNT_SEX_CD'] = array(
+              '#title' => t('Your Gender'),
+              '#type' => 'select',
+              '#options' => $form['gender_options']['#value']
+              );
+
+//hair
+              $form['hair_options'] = array(
+              '#type' => 'value',
+              '#value' => array(t('brown'),t('black'),t('blond'),t('auburn'),t('red'),t('grey'),t('white'),t('dyed/rainbow'),t('none'))
+              );
+
+			  $form['bio']['HAIR_COLOR_CD'] = array(
+              '#title' => t('Your Hair Color'),
+              '#type' => 'select',
+			  //'#default_value' => 'Please Choose Color',
+              '#options' => $form['hair_options']['#value']
+              );       
+
+//eyes
+              $form['eye_options'] = array(
+              '#type' => 'value',
+              '#value' => array(t('brown'),t('black'),t('green'),t('hazel'),t('blue'),t('grey'),t('dyed/rainbow'))
+              );
+
+			  $form['bio']['EYE_COLOR_CD'] = array(
+              '#title' => t('Your Eye Color'),
+              '#type' => 'select',
+			  //'#default_value' => 'Please Choose Color',
+              '#options' => $form['eye_options']['#value']
+              );  
+
+//height ft             
+              $form['height_options'] = array(
+              '#type' => 'value',
+              '#value' => array(t('2'),t('3'),t('4'),t('5'),t('6'),t('7'))
+              );
+
+			  $form['bio']['TRL_APPLCNT_HGT_QT'] = array(
+              '#title' => t('Your Height in Feet'),
+              '#type' => 'select',
+			  //'#default_value' => variable_get('height_options', 0),
+              '#options' => $form['height_options']['#value']
+              );   
+              
+//height in              
+              $form['height_in_options'] = array(
+              '#type' => 'value',
+              '#value' => array(t('0'),t('1'),t('2'),t('3'),t('4'),t('5'),t('6'),t('7'),t('8'),t('9'),t('10'),t('11'),)
+              );
+//NEED FIELD!!!!!!
+			  $form['bio']['xyxy'] = array(
+              '#title' => t('Your Height, extra inches'),
+              '#type' => 'select',
+			  //'#default_value' => variable_get('height_in_options', 0), //returns variable ($nameOfVarToReturn,$defaultValToUse
+              '#options' => $form['height_in_options']['#value']
+              );
+            
+//weight lb        current is 40 to 400 in 1 lb increments      
+              $form['weight_options'] = array(
+              '#type' => 'value',
+              '#value' => array(t('70'),t('80'),t('90'),t('100'),t('110'),t('120'),t('130'),t('140'),t('150'),t('160'),t('170'),)
+              );
+
+			  $form['bio']['TRL_APPLCNT_WGT_QT'] = array(
+              '#title' => t('Your Weight'),
+              '#type' => 'select',
+              '#options' => $form['weight_options']['#value']
+              );
+              
+              $form['bio']['TRL_APPLCNT_BIRTH_DT'] = array(
+              '#title' => t('Birth Date'),
+              '#type' => 'textfield',
+              '#maxlength' => '20',
+              '#size' => '20',
+              );   
+          break;
+          
+        case 4:
+        	   //fieldset
+        	   $form['type'] = array(
+               '#title' => t('What type of permit would you like?'),
+               '#type' => 'fieldset',
+               '#description' => t(''),
+               '#collapsible' => FALSE,
+               '#collapsed' => FALSE,
+               );
+               
+               //codes are E, M, B
+               $form['type']['TRL_PERMIT_AREA_CD'] = array(
+              '#title' => t('Permit Use Location'),
+              '#type' => 'radios',
+              '#options' => array('e' => t('East Bay Watershed'),'m' => t('Mokulumne Watershed'), 'b' => t('Both Watersheds')),
+              '#default_value' => variable_get('TRL_PERMIT_AREA_CD','e'),
+              ); 
+
+              //codes are H, E, B
+              //'h','e',
+              $form['type']['TRL_PERMIT_USE_TYPE_CD'] = array(
+              '#title' => t('Activity Type'),
+              '#type' => 'radios',
+              '#options' => array('h'=> t('Hiking'), 'e'=> t('Horseback Riding'), 'b' => t('Both')), 
+              '#default_value' => variable_get('TRL_PERMIT_USE_TYPE_CD','h'),
+              );    
+
+              //fees $10, 20, 30 - are values an array  t('10','20','30')
+              $form['type']['TRL_PERMIT_FEE_PD_QT'] = array(
+              '#title' => t('Permit Term Desired'),
+              '#type' => 'radios',
+              '#options' => array('10' => t('1 year'),'20' => t('3 year'),'30' => t('5 year')),
+              '#default_value' => variable_get('TRL_PERMIT_FEE_PD_QT', '10'),
+              );    
+               
+//renewal boolean - if yes set collapse fieldset to true
+           	   $form['renewal'] = array(
+               '#title' => t('Are You Renewing?'),
+               '#type' => 'fieldset',
+               '#description' => t(''),
+               '#collapsible' => FALSE,
+               '#collapsed' => FALSE,
+               );
+/**
+TRL_PERMIT_FEE_PD_QT number(2) not null
+TRL_PERMIT_AREA_CD varchar2(1) not null
+TRL_PERMIT_ISSUE_DT date not null
+TRL_PERMIT_ISSUE_TYPE_CD  varchar2(2) not null
+TRL_PERMIT_EXPIRE_DT date not null
+*/               
+        	  $form['renewal']['TRL_PERMIT_NU'] = array(
+              '#title' => t('Existing Permit Number'),
+              '#type' => 'textfield',
+              //'#value' => t('Only fill this in for RENEWALS'),
+              );
+              
+              $form['renewal']['renewal_note'] = array(
+              '#type' => 'markup',
+              '#value' => t('Only fill this in for RENEWALS'),
+              );
+
+//leader boolian?
+               $form['leader'] = array(
+               '#title' => t('Are You a Trip Leader?'),
+               '#type' => 'fieldset',
+               '#description' => t(''),
+               '#collapsible' => FALSE,
+               '#collapsed' => FALSE,
+               );
+
+//there should be NO links to nodes from this app 
+              $form['leader']['renewal_note'] = array(
+              '#type' => 'markup',
+              '#value' => t("To recieve a Trip Leader permit, you must first be endorsed by one of <a href='/sites/default/files/pdfs/endorser_list_4.pdf'>EBMUD's officially sanctioned endorsers</a>.<br />
+              <a href=''>View trail maps here</a><br />
+              <a href=''>Volunteer with the Mokelumne Trailbusters at Pardee/Camanche</a>"),
+              );
+
+        default:
+            ///blah blah, really you should never get here
+            //'#default_value' => $node->body, this holds initial field value
+            //'#value' => $node->body, this holds the fixed value user cannot change
+            //for textfield #size = 60
+    		// #maxlength = 128
+    		// #autocomplete_path = FALSE
+    		// #ahah['event'] = 'blur'
+
+            
+            
+            
+          break;
+    }
+
+    //show accept button on first page
+    if ($form_state['storage']['step'] == 1) {
+        $form['accept'] = array(
+            '#type' => 'submit',
+            '#value' => 'I accept these terms'
+          );
+    }
+
+    //show back button on all pages after first
+    if ($form_state['storage']['step'] > 1) {
+        $form['previous'] = array(
+            '#type' => 'submit',
+            '#value' => '<< Previous'
+          );
+    }
+
+    //show next button all the time SHOULD BE GREATER THAN OR EQUAL TO 1
+    if ($form_state['storage']['step'] > 1) {
+         $form['next'] = array(
+        '#type' => 'submit',
+        '#value' => 'Next >>'
+      );
+}
+    return $form;
+}
+
+//on submission this stores form data into an array object AND inserts data into db AND passes object to Ubercart as cartlink
+function trail_permits_my_form_submit($form, &$form_state) {
+    //save the values for the current step into the storage array
+    $form_state['storage']['values'][$form_state['storage']['step']] = $form_state['values'];
+    // check the button that was clicked and action the step change
+    if ($form_state['clicked_button']['#id']=='edit-previous') {
+        $form_state['storage']['step']--;
+    } elseif ($form_state['clicked_button']['#id']=='edit-next') {
+        $form_state['storage']['step']++;
+    } elseif ($form_state['clicked_button']['#id']=='edit-accept') {
+	        $form_state['storage']['step']++;
+	    }
+	//insert into db   - need to figure out how to send some fields to diff tables
+	//db_query("INSERT INTO {table} (name, log, hidden) VALUES ('%s', %d, '%s')", 
+	/**
+	 * 
+	 * $query = db_insert('trl_applcnt_permits', $options);
+	 * //creates an insert query object that will insert one or more records to the table
+     * $TRL_APPLCNT_GN = db_insert('trl_applcnt_permits') 
+     * ->fields(array(
+     * 'TRL_APPLCNT_FRST_NM' => 'bob',  //title is column/field name and 'Example' is value to go in to db
+     * 'TRL_APPLCNT_MID_INIT_NM' => 'p',
+     * 'TRL_APPLCNT_LST_NM' => 'smith',
+     * ))
+     * ->execute();
+	 * 
+	 */
+	//drupal_write_record($table, &$object [&$var passed by reference vs by value], $update = array()) [IF this is an update then the primary key]
+    drupal_write_record('trl_applcnt_permits', $form_state['values']);
+    drupal_write_record('trl_appl_tmp', $form_state['values']);
+    drupal_write_record('trl_permit_tmp', $form_state['values']);
+    drupal_set_message(t('Trail applicant permit table TRL_APPLCNT_FRST_NM: %TRL_APPLCNT_FRST_NM has been added to the database.', array('%TRL_APPLCNT_FRST_NM' => $form_state['values']['TRL_APPLCNT_FRST_NM'])));
+    dpm($form_state); //for debugging with devel module
+    //watchdog('mail', 'Trail Permit form: TRL_APPLCNT_FRST_NM %TRL_APPLCNT_FRST_NM added.', array('%TRL_APPLCNT_FRST_NM' => $form_state['values']['TRL_APPLCNT_FRST_NM']), WATCHDOG_NOTICE, l(t('view'), 'admin/build/trailpermits'));
+	    
+	$form_state['values']['TRL_APPLCNT_FRST_NM']; //not sure what this does... 
+
+    //redrawing the form
+    $form_state['rebuild'] = TRUE;
+    //redirect to Ubercart oneclick
+    $form_state['redirect'] = array('http://127.0.0.1:88/acquia1.2.29/node/3', 'var1=value1', 'var2=value2', );
+	//The resulting redirection will look like: ?q=path&var1=value1&var2=value2... 
+    //this would be the oneclick path to the store for trail permits
+    return;
+}
+
